@@ -1,5 +1,5 @@
 {
-  "name": "tofd2",
+  "name": "@srph/tofd2",
   "version": "1.0.0",
   "description": "tofd2 converts an object to a FormData representation.",
   "main": "lib/index.js",
