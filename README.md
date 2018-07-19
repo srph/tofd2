@@ -42,3 +42,15 @@ const payload = tofd({
 tofd(obj: Object): FormData
 ```
 Accepts an object that gets converted into `FormData`.
+
+## Contributing
+### Formatting
+Run [Prettier](https://github.com/prettier/prettier) on the codebase.
+```bash
+yarn fmt
+```
+
+### Running tests
+```bash
+yarn test
+```
