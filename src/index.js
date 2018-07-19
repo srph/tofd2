@@ -1,16 +1,7 @@
 import FormData from 'form-data';
 
-function tofd(obj) {
-  const flattened = flattenKeys(obj);
-
-  return Object.keys(flattened).reduce((fd, k) => {
-    fd.append(k, flattened[k]);
-    return fd;
-  }, new FormData());
-}
-
 function flattenKeys(obj) {
-  let output = {}
+  const output = {};
 
   function flatten(obj, parentKey) {
     Object.keys(obj).forEach(key => {
@@ -32,6 +23,15 @@ function flattenKeys(obj) {
   flatten(obj);
 
   return output;
+}
+
+function tofd(obj) {
+  const flattened = flattenKeys(obj);
+
+  return Object.keys(flattened).reduce((fd, k) => {
+    fd.append(k, flattened[k]);
+    return fd;
+  }, new FormData());
 }
 
 module.exports = tofd;
